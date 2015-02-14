@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Helvetica;
+	color: #555555;
+	background: #000;
+}
+
+.slide {
+	top: 0;
+	position: absolute;
+}
+
+.current {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.control-icon {
+	width: 36px;
+	height: 100%;
+	position: absolute; 
+	top: 0;
+	background: #000;
+  	background: rgba(0,0,0, .5);
+  	font-size: 3em;
+  	color: #FFFFFF;
+  	opacity: .5;
+  	border: none;
+}
+
+.control-icon:hover {
+  	opacity: 1;
+	cursor: pointer;
+}
+
+.backward {
+	left: 0;
+}
+
+.forward {
+	right: 0;
+}
