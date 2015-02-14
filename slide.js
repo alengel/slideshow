@@ -1,9 +1,9 @@
 function updateSlide(slides, current, previous) {
     slides[previous].classList.remove('current');
-    slides[previous].classList.add('hidden');
-    slides[current].classList.remove('hidden');
     slides[current].classList.add('current');
 }
+
+var LOOP_INTERVAL = 3000;
 
 var createCarousel = function(className) {
         
@@ -16,6 +16,9 @@ var createCarousel = function(className) {
             //ToDo
             //Load images in dynamically?
             this.addEventListeners(el);
+
+            updateSlide(this.slides, this.counter, this.slides.length-1);
+
             this.playCarousel();
         },
 
@@ -32,7 +35,11 @@ var createCarousel = function(className) {
         },
 
         playCarousel: function() {
-            updateSlide(this.slides, this.counter, this.slides.length-1);
+            var that = this;
+
+            window.setInterval(function() {
+                that.showNextImage();
+            }, LOOP_INTERVAL); 
         },
 
         showNextImage: function() {
