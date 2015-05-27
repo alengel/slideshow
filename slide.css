@@ -10,11 +10,15 @@ body {
 }
 
 .slide {
-	top: 0;
-	position: absolute;
-	opacity: 0;
+  opacity: 0;
 	transition: opacity 1s;
 	backface-visibility: hidden;
+}
+
+.slide img {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .current {
@@ -28,15 +32,19 @@ body {
 	position: absolute; 
 	top: 0;
 	background: #000;
-  	background: rgba(0,0,0, .5);
-  	font-size: 3em;
-  	color: #FFFFFF;
-  	opacity: .5;
-  	border: none;
+	background: rgba(0,0,0, .5);
+	font-size: 3em;
+	color: #FFFFFF;
+	opacity: .5;
+	border: none;
+}
+
+.control-icon:focus {
+  outline: 0;
 }
 
 .control-icon:hover {
-  	opacity: 1;
+  opacity: 1;
 	cursor: pointer;
 }
 
